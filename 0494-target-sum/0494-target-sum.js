@@ -16,13 +16,13 @@ var findTargetSumWays = function(nums, target) {
         }
         //recursive helper 
         //include + 
-        runningSum += num[i]
+        runningSum += nums[i]
         dfs(i+1,nums,target,runningSum)
-        runningSum -= num[i]
+        runningSum -= nums[i]
         //-
-         runningSum -= num[i]
+         runningSum -= nums[i]
         dfs(i+1,nums,target,runningSum)
-        runningSum += num[i]
+        runningSum += nums[i]
     }
     dfs(0,nums,target,0)
     return result
