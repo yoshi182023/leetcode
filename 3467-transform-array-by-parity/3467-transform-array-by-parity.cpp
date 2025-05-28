@@ -1,6 +1,7 @@
 class Solution {
 public:
-    std::vector<int> transformArray(std::vector<int>& nums) {
+    vector<int> transformArray(vector<int>& nums) {
+    
         // Transform the array
         for (int i = 0; i < nums.size(); i++) {
             if (nums[i] % 2 == 0) {
