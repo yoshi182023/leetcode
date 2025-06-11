@@ -1,5 +1,6 @@
 function checkIfPangram(sentence: string): boolean {
      
-    let set = new Set(sentence)
+        let arr = sentence.split('')
+    let set = new Set(arr)
     return set.size === 26
 };
