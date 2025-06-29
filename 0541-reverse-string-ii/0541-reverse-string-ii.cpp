@@ -12,7 +12,8 @@ public:
                 continue;
             }
             // 3. 剩余字符少于 k 个，则将剩余字符全部反转。
-           reverse(s.begin() + i, s.begin() + s.size());
+         reverse(s.begin() + i, s.end());
+         
         }
         return s;
     }
