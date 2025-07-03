@@ -34,7 +34,7 @@ class Solution {
         if(k_smallest == pivot_idx) return this.nums[k_smallest];
         else if(k_smallest < pivot_idx)
         return quickselect(left,pivot_idx -1, k_smallest);// k 小的元素在左边，递归左边部分继续找。
-        return qucikselect(pivot_idx +1,right,k_smallest );
+            return quickselect(pivot_idx + 1, right, k_smallest); // 去右边找
     }//\U0001f50d 否则在右边，递归右边部分继续找。
 
 
