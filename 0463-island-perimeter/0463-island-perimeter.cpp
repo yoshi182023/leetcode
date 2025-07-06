@@ -32,9 +32,3 @@ public:
         return 0;
     }
 };
-class Solution {
-public:
-    int islandPerimeter(vector<vector<int>>& grid) {
-        
-    }
-};
