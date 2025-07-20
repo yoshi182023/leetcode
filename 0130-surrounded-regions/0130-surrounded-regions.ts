@@ -2,10 +2,7 @@
  Do not return anything, modify board in-place instead.
  */
 function solve(board: string[][]): void {
-  /**
- * @param {character[][]} board
- * @return {void} Do not return anything, modify board in-place instead.
- */
+
  
 const ROWS = board.length;
     const COLS = board[0].length;
