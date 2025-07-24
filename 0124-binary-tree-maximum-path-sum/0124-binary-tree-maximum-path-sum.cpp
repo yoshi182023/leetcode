@@ -25,7 +25,7 @@ public:
     if(!root) return 0;
         int lmax = max(0,dfs(root->left,res));
         int rmax = max(0,dfs(root->right,res));
-        res = (lmax+rmax + root->val);
+        res = max(res,lmax+rmax + root->val);
         return root->val +max(lmax,rmax);
 
 
