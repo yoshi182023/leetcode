@@ -20,7 +20,7 @@ function hasCycle(head: ListNode | null): boolean {
         slow = slow.next
         fast = fast.next.next
         if(slow == fast){
-            return ture
+            return true
         }
     }
     return false
