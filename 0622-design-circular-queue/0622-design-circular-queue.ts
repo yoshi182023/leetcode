@@ -45,7 +45,7 @@ class MyCircularQueue {
     }
 
     isFull(): boolean {
-          return  this._numUsed === _capacity;  
+          return  this._numUsed === this._capacity;  
     }
 }
 
