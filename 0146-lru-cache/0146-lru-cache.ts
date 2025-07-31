@@ -1,6 +1,7 @@
 class LRUCache {
-     private capacity: number;
+private capacity: number;
 private map: Map<number, number>;
+
     constructor(capacity: number) {
      this.capacity = capacity;
 
