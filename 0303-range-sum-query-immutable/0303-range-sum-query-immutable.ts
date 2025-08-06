@@ -15,7 +15,7 @@ private prefixSum: number[];
     
     sumRange(left: number, right: number): number {
         return this.prefixSum[right + 1] - this.prefixSum[left];
-        
+                // 区间 [left, right] 的和 = prefixSum[right + 1] - prefixSum[left]
     }
 }
 
