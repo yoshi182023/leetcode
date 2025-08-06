@@ -1,18 +1,20 @@
 
 class NumArray {
-private sums: number[];
+private prefixSum: number[];
     
     constructor(nums: number[]) {
         
-        this.sums = new Array(nums.length + 1).fill(0);
+        this.prefixSum = new Array(nums.length + 1).fill(0);
         for (let i = 0; i < nums.length; i++) {
-            this.sums[i + 1] = this.sums[i] + nums[i];
+            console.log(i)
+            this.prefixSum[i + 1] = this.prefixSum[i] + nums[i];
+            console.log(this.prefixSum);
         }
         
     }
     
     sumRange(left: number, right: number): number {
-        return this.sums[right + 1] - this.sums[left];
+        return this.prefixSum[right + 1] - this.prefixSum[left];
         
     }
 }
