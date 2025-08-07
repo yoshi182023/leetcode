@@ -1,0 +1,42 @@
+
+var TwoSum = function() {
+    this.map = new Map();
+};
+
+/** 
+ * @param {number} number
+ * @return {void}
+ */
+TwoSum.prototype.add = function(number) {
+
+    this.map.set(number, ( this.map.get(number) || 0) + 1);
+
+};
+
+/** 
+ * @param {number} value
+ * @return {boolean}
+ */
+TwoSum.prototype.find = function(value) {
+     for (const [num, count] of this.map) {
+        const complement = value - num;
+          if (complement === num) {
+            // 如果complement等于num，需要该数字至少出现2次
+            if (count >= 2) {
+                return true;
+            }
+        } else {
+            // 如果complement不等于num，只需要complement存在即可
+            if (this.map.has(complement)) {
+                return true;
+            }
+        }}
+    return false;
+};
+
+/** 
+ * Your TwoSum object will be instantiated and called as such:
+ * var obj = new TwoSum()
+ * obj.add(number)
+ * var param_2 = obj.find(value)
+ */
