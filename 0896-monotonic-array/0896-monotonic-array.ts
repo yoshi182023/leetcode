@@ -8,7 +8,7 @@ function isMonotonic(nums: number[]): boolean {
         if (!(nums[i] <= nums[i+1])){ //increasing 
             increase = false 
         }
-         if (!(nums[i] >= nums[i+1])){ //increasing 
+         if (!(nums[i] >= nums[i+1])){  
             decrease = false 
         }
     }
