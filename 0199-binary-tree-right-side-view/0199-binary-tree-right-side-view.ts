@@ -12,8 +12,7 @@
  * }
  */
 
-function rightSideView(root: TreeNode | null): number[] {
-    
+function rightSideView(root: TreeNode | null): number[] {   
        let ans = []; //结果数组
         //定义一个队列
         if(!root) return ans; 
@@ -26,7 +25,7 @@ function rightSideView(root: TreeNode | null): number[] {
             //把这一层的节点逐一弹出
             for(let i =0; i< cnt; i++){
              let curr = queue.shift();
-       
+       //shift()已经移除了队列头部节点，不需要再 pop()。
                 if(curr.left) queue.push(curr.left);
                 if(curr.right) queue.push(curr.right);
                 if(i == cnt -1 ){
