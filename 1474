@@ -1,0 +1,33 @@
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @param {number} m
+ * @param {number} n
+ * @return {ListNode}
+ */
+var deleteNodes = function(head, m, n) {
+    let dummy = new ListNode(0);
+    dummy.next = head; 
+    let validLast = head;
+    while(head!==null){
+        let sizeM = m, sizeN = n
+        while(sizeM > 0 && head !== null){
+            validLast = head;
+            head = head.next
+            sizeM--;
+        }
+        while(sizeN >0 && head!== null){
+            head = head.next
+            sizeN--
+        }
+        validLast.next = head 
+    }
+    return dummy.next;
+
+};
