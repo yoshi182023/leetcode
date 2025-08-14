@@ -28,9 +28,8 @@ function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
         const left1 = node1.left, right1 = node1.right;
         const left2 = node2.left, right2 = node2.right;
         
-        if ((left1 === null) ^ (left2 === null)) return false;
-        if ((right1 === null) ^ (right2 === null)) return false;
-        
+       if ((left1 === null) !== (left2 === null)) return false;
+if ((right1 === null) !== (right2 === null)) return false;
         if (left1 !== null) queue1.push(left1);
         if (right1 !== null) queue1.push(right1);
         if (left2 !== null) queue2.push(left2);
