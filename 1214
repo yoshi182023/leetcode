@@ -1,0 +1,38 @@
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root1
+ * @param {TreeNode} root2
+ * @param {number} target
+ * @return {boolean}
+ */
+var twoSumBSTs = function(root1, root2, target) {
+       const myset = new Set();
+    
+    // 遍历第一棵树，将所有值存入集合
+    const traverse = (root) => {
+        if (root === null) return;
+        traverse(root.left);
+        myset.add(root.val);
+        traverse(root.right);
+    };
+    traverse(root1);
+    
+    // 检查第二棵树中是否存在满足条件的值
+    const check = (root) => {
+        if (root === null) return false;
+        const diff = target - root.val;
+        if (myset.has(diff)) {
+            return true;
+        }
+        return check(root.left) || check(root.right);
+    };
+    
+    return check(root2);
+};
