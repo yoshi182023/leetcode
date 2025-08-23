@@ -13,9 +13,9 @@ var insert = function(intervals, newInterval) {
         res.push(intervals[i]);
         i++;
     } // 合并所有与新区间重叠的区间
-    while(i<intervals.length && intervals[i][start]<= newInterval[end]){
+ while(i < intervals.length && intervals[i][start] <= newInterval[end] && intervals[i][end] >= newInterval[start]){        //newInterval[start]要插入的新区间的开始时间
         newInterval[start] = Math.min(newInterval[start], intervals[i][start])
-        newInterval[end] = Math.max(newInterval[end], intervals[i][end])
+        newInterval[end] = Math.max(newInterval[end], intervals[i][end])//intervals[i][end当前区间的结束时间
         i++;
     }
     res.push(newInterval)
