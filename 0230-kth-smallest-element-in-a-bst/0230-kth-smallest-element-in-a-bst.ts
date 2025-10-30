@@ -29,7 +29,7 @@ function kthSmallest(root: TreeNode | null, k: number): number {
  while (cur !== null || stack.length > 0) {
         //traversing our binary tree 
         //while cur is not null
-      while (cur !== null) {
+      while (cur) {
     stack.push(cur)
             //keep going left 
             //go through every node in the left subtree before visit the current node 
