@@ -1,5 +1,5 @@
 function alternatingSum(nums: number[]): number {
-    var alternatingSum = function(nums) {
+
     let result = 0
     for(let i = 0; i < nums.length; i++){
         if ( i % 2 === 0){
