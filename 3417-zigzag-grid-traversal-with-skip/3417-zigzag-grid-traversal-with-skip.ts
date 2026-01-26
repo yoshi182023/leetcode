@@ -4,7 +4,7 @@ function zigzagTraversal(grid: number[][]): number[] {
     let height = grid.length;
     let width = grid[0].length;
 
-    let px = 0, py = 0;
+    let px = 0, py = 0; // x = 列号  y = 行号
     let parity = 0;
 
     while (py < height) {
