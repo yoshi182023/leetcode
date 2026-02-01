@@ -1,0 +1,10 @@
+function isSubstringPresent(s: string): boolean {
+    var isSubstringPresent = function(s) {
+    for (let i = 0; i < s.length - 1; i++) {
+        let substr = s[i + 1] + s[i];
+        if (s.includes(substr)) {
+            return true;
+        }
+    }
+    return false;
+};
