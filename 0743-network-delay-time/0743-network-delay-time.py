@@ -6,8 +6,9 @@ class Solution:
 
         for u, v, w in times:
             edges[u].append((v, w))
+          
 
-        minHeap = [(0, k)]
+        minHeap = [(0, k)] # first value, starting node k 
         visit = set()
         t = 0
 
